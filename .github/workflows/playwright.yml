@@ -1,4 +1,4 @@
-name: Playwright Tests
+name: SauceDemo Playwright Tests
 on:
   push:
     branches: [ main, master ]
