@@ -1,4 +1,5 @@
 import { Locator, type Page } from '@playwright/test';
+import { ENV } from '../utils/env';
 
 export class LoginPage {
     readonly page: Page;
@@ -14,7 +15,7 @@ export class LoginPage {
     }
 
     async navigateToLogin() {
-        await this.page.goto('https://www.saucedemo.com/');
+        await this.page.goto(ENV.BASE_URL);
     }
 
     async login(user: string, pass: string) {
