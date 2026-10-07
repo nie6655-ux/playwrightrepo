@@ -3,4 +3,5 @@ export const ENV = {
     USERNAME: process.env.SAUCEDEMO_USERNAME!,
     PASSWORD: process.env.SAUCEDEMO_PASSWORD!,
     LOCKED_OUT_USERNAME: process.env.SAUCEDEMO_LOCKED_OUT_USERNAME!,
+    PROBLEM_USER: process.env.SAUCEDEMO_PROBLEM_USER!
 };
