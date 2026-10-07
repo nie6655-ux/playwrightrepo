@@ -45,12 +45,12 @@ test.describe('Login Tests', () => {
             await expect(inventoryPage.productImageFour).toBeVisible();
             await expect(inventoryPage.productImageFive).toBeVisible();
             await expect(inventoryPage.productImageSix).toBeVisible();
-            await expect(inventoryPage.productImageOne).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
-            await expect(inventoryPage.productImageTwo).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
-            await expect(inventoryPage.productImageThree).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
-            await expect(inventoryPage.productImageFour).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
-            await expect(inventoryPage.productImageFive).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
-            await expect(inventoryPage.productImageSix).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(inventoryPage.productImageOne).toHaveAttribute('src', /assets\/sl-404-.*\.jpg/);
+            await expect(inventoryPage.productImageTwo).toHaveAttribute('src', /assets\/sl-404-.*\.jpg/);
+            await expect(inventoryPage.productImageThree).toHaveAttribute('src', /assets\/sl-404-.*\.jpg/);
+            await expect(inventoryPage.productImageFour).toHaveAttribute('src', /assets\/sl-404-.*\.jpg/);
+            await expect(inventoryPage.productImageFive).toHaveAttribute('src', /assets\/sl-404-.*\.jpg/);
+            await expect(inventoryPage.productImageSix).toHaveAttribute('src', /assets\/sl-404-.*\.jpg/);
         });
     });
 });
