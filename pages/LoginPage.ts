@@ -7,6 +7,7 @@ export class LoginPage {
     readonly password: Locator;
     readonly loginBtn: Locator;
     readonly errorMessage: Locator;
+    readonly productImageOne: Locator;
 
     constructor(page: Page) {
         this.page = page;
@@ -14,6 +15,7 @@ export class LoginPage {
         this.password = page.getByPlaceholder('Password');
         this.loginBtn = page.getByRole('button', { name: 'Login'});
         this.errorMessage = page.getByText('Epic sadface: Sorry, this user has been locked out.');
+        this.productImageOne = page.getByAltText('Sauce Labs Backpack');
     }
 
     async navigateToLogin() {
