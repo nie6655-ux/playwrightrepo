@@ -24,6 +24,7 @@ jobs:
         SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
         SAUCEDEMO_PASSWORD: ${{ secrets.SAUCEDEMO_PASSWORD }}
         SAUCEDEMO_LOCKED_OUT_USERNAME: ${{ secrets.SAUCEDEMO_LOCKED_OUT_USER }}
+        SAUCEDEMO_PROBLEM_USER: ${{ secrets.SAUCEDEMO_PROBLEM_USER }}
     - uses: actions/upload-artifact@v4
       if: ${{ !cancelled() }}
       with:

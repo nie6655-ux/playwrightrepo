@@ -31,16 +31,26 @@ test.describe('Login Tests', () => {
         });
     });
 
-    test('Verify login succeeds for problem user but incorrect product images are displayed', async ({ loginPage }) => {
+    test('Verify login succeeds for problem user but incorrect product images are displayed', async ({ loginPage, inventoryPage, page }) => {
 
         await test.step('Login with problem  user', async () => {
             await loginPage.login(ENV.PROBLEM_USER, ENV.PASSWORD);
         });
 
         await test.step('Verify user is redirect to inventory page but product images are incorrect', async () => {
-            await expect(loginPage.page).toHaveURL(/inventory\.html/);
-            await expect(loginPage.productImageOne).toBeVisible();
-            await expect(loginPage.productImageOne).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(page).toHaveURL(/inventory\.html/);
+            await expect(inventoryPage.productImageOne).toBeVisible();
+            await expect(inventoryPage.productImageTwo).toBeVisible();
+            await expect(inventoryPage.productImageThree).toBeVisible();
+            await expect(inventoryPage.productImageFour).toBeVisible();
+            await expect(inventoryPage.productImageFive).toBeVisible();
+            await expect(inventoryPage.productImageSix).toBeVisible();
+            await expect(inventoryPage.productImageOne).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(inventoryPage.productImageTwo).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(inventoryPage.productImageThree).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(inventoryPage.productImageFour).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(inventoryPage.productImageFive).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
+            await expect(inventoryPage.productImageSix).toHaveAttribute('src', /assets\/sl-404-Cq1a9k9X\.jpg/);
         });
     });
 });
