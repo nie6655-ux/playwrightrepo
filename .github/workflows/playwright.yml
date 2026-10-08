@@ -17,8 +17,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Playwright tests
-      run: npx playwright test
+    - name: Run Playwright tests and update custom dashboard test report
+      run: npx run test:report
       env:
         BASE_URL: ${{ secrets.BASE_URL }}
         SAUCEDEMO_USERNAME: ${{ secrets.SAUCEDEMO_USERNAME }}
